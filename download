@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video Downloader</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    width:90%;
+    max-width:450px;
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+
+h2{
+    text-align:center;
+    margin-bottom:20px;
+    color:#222;
+}
+
+input{
+    width:100%;
+    padding:14px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+    margin-bottom:15px;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:8px;
+    background:#ff0000;
+    color:#fff;
+    font-size:17px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#d90000;
+}
+
+#result{
+    margin-top:18px;
+    text-align:center;
+    color:#444;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h2>Video Downloader</h2>
+
+<input
+type="text"
+id="url"
+placeholder="Paste YouTube Video URL">
+
+<button onclick="downloadVideo()">
+Download
+</button>
+
+<div id="result"></div>
+
+</div>
+
+<script>
+function downloadVideo(){
+
+let url=document.getElementById("url").value.trim();
+
+if(url===""){
+document.getElementById("result").innerHTML="Please enter a video URL.";
+return;
+}
+
+// Placeholder only.
+// A real YouTube downloader cannot be implemented with frontend code alone.
+document.getElementById("result").innerHTML=
+"Backend required to process downloads. Frontend is ready.";
+
+}
+</script>
+
+</body>
+</html>
